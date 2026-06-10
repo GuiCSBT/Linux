@@ -1,14 +1,14 @@
-# Lab 01 - Usuários, Grupos e Permissões
+* Lab 01 - Usuários, Grupos e Permissões
 
-## Objetivo
+* Objetivo
 
 Simular um ambiente corporativo utilizando Ubuntu Server para praticar gerenciamento de usuários, grupos, diretórios e permissões.
 
-## Cenário
+* Cenário
 
-Foi criada uma estrutura empresarial chamada Pantuni para representar departamentos e colaboradores dentro de um servidor Linux.
+Criei uma estrutura empresarial chamada Pantuni para representar departamentos e colaboradores dentro de um servidor Linux.
 
-## Estrutura da Empresa
+* Estrutura da Empresa
 
 Pantuni
 
@@ -18,13 +18,13 @@ Pantuni
 * Gerência
 * Marketing
 
-## Usuários Criados
+* Usuários Criados
 
 * paulo.pantuni
 * paulo.pantuni.jr
 * rita.pantuni
 
-## Grupos Criados
+* Grupos Criados
 
 * Pantuni_Gerente
 * Pantuni_Financeiro
@@ -32,29 +32,29 @@ Pantuni
 * Pantuni_Compras
 * Pantuni_Contabilidade
 
-## Atividades Realizadas
+* Atividades Realizadas
 
-### Criação de usuários
+* Criação de usuários
 
 Utilização do comando useradd para criação de contas de usuários.
 
-### Criação de grupos
+* Criação de grupos
 
 Utilização do comando groupadd para representar os departamentos da empresa.
 
-### Associação de usuários aos grupos
+* Associação de usuários aos grupos
 
 Utilização do comando usermod para vincular usuários aos respectivos setores.
 
-### Criação da estrutura de diretórios
+* Criação da estrutura de diretórios
 
 Criação de diretórios representando departamentos da empresa.
 
-### Controle de permissões
+* Controle de permissões
 
 Utilização dos comandos chown e chmod para restringir acesso aos recursos corporativos.
 
-## Conceitos Aprendidos
+* Conceitos Aprendidos
 
 * Usuários Linux
 * Grupos Linux
@@ -63,6 +63,6 @@ Utilização dos comandos chown e chmod para restringir acesso aos recursos corp
 * Propriedade de arquivos
 * Controle de acesso baseado em grupos
 
-## Resultado
+* Resultado
 
-Ao final do laboratório foi possível criar uma estrutura corporativa funcional utilizando usuários, grupos e permissões, compreendendo como o Linux realiza o controle de acesso em ambientes empresariais.
+Ao final do laboratório foi possível criei uma estrutura corporativa funcional utilizando usuários, grupos e permissões, compreendendo como o Linux realiza o controle de acesso em ambientes empresariais.Bem como funciona o restaurante no dia-dia.
