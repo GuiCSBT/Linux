@@ -63,3 +63,18 @@ Ao final do laboratório, foi possível criar uma estrutura de diretórios opera
 
 ## ✅ Resultado
 Estrutura de diretórios operante e segura. Com a aplicação do comando `chmod 700`, garantiu-se que pastas departamentais críticas, como *Contabilidade* e *Compras*, fiquem completamente invisíveis e inacessíveis para usuários de outros setores, mitigando riscos de acesso não autorizado a informações sensíveis.
+
+
+---
+
+## 📸 Provas de Execução (Prints)
+
+Para demonstrar a eficácia das permissões avançadas, apresento os logs do terminal com a criação da estrutura e a verificação de antes e depois.
+
+**Criação de Grupos e Usuários:**
+![Histórico de criação](Lab02.png)
+
+**Isolamento dos Diretórios:**
+As imagens mostram a verificação com `ls -l` antes e depois da aplicação do comando `chmod 700`, comprovando o isolamento dos diretórios departamentais. Apenas os donos têm permissão total, enquanto os outros foram bloqueados.
+
+![Verificação de permissões com ls -l](Lab02.permissões.png)
