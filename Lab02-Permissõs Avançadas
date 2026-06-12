@@ -1,1 +1,65 @@
+# Lab 02 - Permissões Avançadas e Isolamento de Ambientes
 
+## 🎯 Objetivo
+Aprofundar os conhecimentos em administração de sistemas Linux, criando uma topologia mais complexa com múltiplos ambientes de negócios. O foco deste laboratório foi a aplicação de permissões restritivas (octal) para garantir o isolamento total de dados entre diferentes departamentos.
+
+## 🏢 Cenário
+Simulação de um servidor central hospedando os dados de dois negócios distintos: um **Mercado** e um **Restaurante**. Cada negócio possui sua própria estrutura de diretórios, grupos de acesso e colaboradores específicos.
+
+---
+
+## 🛠️ Estrutura Criada
+
+### Ambiente 1: Mercado (`/mercado`)
+**Grupos Departamentais:**
+* `mercado.gerente`
+* `mercado.contabilidade`
+* `mercado.fiscal`
+* `mercado.compras`
+* `mercado.rh`
+* `mercado.tesouraria`
+
+**Usuários e Atribuições:**
+* `Hebert.GM` ➔ Gerência
+* `Ricardo.CbM` ➔ Contabilidade
+* `Renata.Fi` ➔ Fiscal
+* `Diego.Co` ➔ Compras
+* `Poliana.Rh` ➔ RH
+* `Jessica.Te` ➔ Tesouraria
+
+### Ambiente 2: Restaurante (`/restaurante`)
+**Grupos Departamentais:**
+* `restaurante.gerente`
+* `restaurante.contabilidade`
+* `restaurante.compras`
+* `restaurante.caixa`
+
+**Usuários e Atribuições:**
+* `Paulo.GR` ➔ Gerência
+* `Palmeirense.CbR` ➔ Contabilidade
+* `Rita.CR` ➔ Compras
+* `Guilherme.Cx` ➔ Caixa
+
+---
+
+## 💻 Atividades e Comandos Executados
+
+| Ação | Comando Utilizado | Descrição |
+| :--- | :--- | :--- |
+| **Criação em Lote de Grupos** | `groupadd` | Definição das estruturas organizacionais de ambos os negócios. |
+| **Criação de Usuários** | `useradd` | Provisionamento das contas dos colaboradores. |
+| **Associação de Grupos** | `usermod -aG` | Inserção dos usuários nos grupos correspondentes aos seus setores. |
+| **Troca de Propriedade (Owner)** | `chown` | Ex: `sudo chown Diego.Co /mercado/Compras` - Transferiu a posse do diretório do `root` para o usuário responsável. |
+| **Permissões Restritivas** | `chmod 700` | Ex: `sudo chmod 700 /mercado/Compras` - Removeu o acesso de visualização de qualquer outro usuário (`drwx------`), isolando os dados de forma segura. |
+| **Auditoria de Permissões** | `ls -l` | Verificação visual das alterações nas matrizes de permissões dos diretórios. |
+
+---
+
+## 📚 Conceitos Aprendidos e Reforçados
+* Administração de múltiplos ambientes no mesmo servidor.
+* Resolução de erros de sintaxe no terminal em tempo de execução.
+* Compreensão profunda do modelo de permissões octais do Linux (onde `700` = `rwx` para o dono e `---` para grupo e outros).
+* Aplicação prática do Princípio do Menor Privilégio (PoLP).
+
+## ✅ Resultado
+Estrutura de diretórios operante e segura. Com a aplicação do comando `chmod 700`, garantiu-se que pastas departamentais críticas, como *Contabilidade* e *Compras*, fiquem completamente invisíveis e inacessíveis para usuários de outros setores, mitigando riscos de acesso não autorizado a informações sensíveis.
